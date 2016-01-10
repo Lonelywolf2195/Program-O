@@ -9,6 +9,13 @@
   * DATE: 02-13-2013
   * DETAILS: Program O's starting point
   ***************************************/
+  
+       if (!empty($_GET)) {
+    // if id GOT then i'll set a cookie; other pages wil look for the cookie and
+    // identify you  ;D
+    $wolfid = $_GET["id"];
+    setcookie('user',  $wolfid);
+     } 
 
   if (!file_exists('config/global_config.php'))
   {
